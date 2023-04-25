@@ -1,25 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
-
+import PhotoShowing from './components/PhotoShowing';
+import { createContext, useState } from 'react';
+import {BrowserRouter, Route, Routes} from "react-router-dom"
+import Bookmarked from './components/Bokmarked';
+const imageContext=createContext()
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  
+  const [bookmarked,setBookmarked]=useState([])
+  
+  return  <imageContext.Provider value={{bookmarked,setBookmarked}}>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<PhotoShowing />} />
+      <Route path='/bookmark' element={<Bookmarked />} />
+    </Routes>
+    </BrowserRouter> 
+  </imageContext.Provider>
+   
 }
 
-export default App;
+export {
+  App,
+  imageContext
+}

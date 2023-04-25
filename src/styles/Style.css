@@ -1,0 +1,52 @@
+#main-div{
+    margin-left: 2rem;
+}
+.head-div{
+    margin: 2% 15%;
+}
+.head-div h2{
+    display: inline-block;
+    
+}
+.head-div button{
+    margin-left: 15rem;
+    padding: 6px;
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+
+}
+.search-div{
+    margin: 0% 12%;
+
+}
+.search-div input{
+    width: 50%;
+    
+}
+.search-div button{
+    color: white;
+    background-color: black;
+    margin-left: 0.5rem;
+    padding: 2px;
+    border-radius: 4px;
+}
+.img-div{
+    margin-top: 2%;;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+}
+
+#img-size-div{
+    width: 20rem;
+}
+#img-size-div img{
+    max-width: 100%;
+}
+#add-bookmark{
+    color: white;
+    background-color: black;
+    margin-left: 0.5rem;
+    padding: 2px;
+    cursor: pointer;
+}
